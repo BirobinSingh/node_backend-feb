@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
+import { configDotenv } from "dotenv";
+configDotenv();
 
-const mongoUrl = 'mongodb://localhost:27017/februaryDB';
+// const mongoUrl = 'mongodb://localhost:27017/februaryDB';
 
+// const mongoUrl = `mongodb+srv://grobin578_db_user:Z61ksFETOduwCGux@cluster0.2mfynf8.mongodb.net/februaryDB`;
+const mongoUrl = process.env.MONGO_URL;
 // mongoose.connect(mongoUrl);
 
 

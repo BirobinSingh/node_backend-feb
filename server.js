@@ -4,6 +4,8 @@ import Person from './models/person.js';
 import Menu from './models/menu.js';
 import personRoutes from './routes/personRoutes.js';
 import menuRoutes from './routes/menuRoutes.js';
+import { configDotenv } from 'dotenv';
+configDotenv();
 
 // import connectDb from './db.js';
 // connectDb();
@@ -39,7 +41,7 @@ app.get('/list',(req,res)=>{
 
 })
 
-app.listen(3000,()=> console.log("server started at 3000"));
+app.listen((process.env.PORT || 3000),()=> console.log("server started at 3000"));
 
 
 
